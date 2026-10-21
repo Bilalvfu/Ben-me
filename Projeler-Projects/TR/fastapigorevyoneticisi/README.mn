@@ -1,25 +1,21 @@
-# 🚀 FastAPI Task Manager API
+# FastAPI Görev Yönetimi
 
-Bu proje, **FastAPI**, **SQLAlchemy** ve **Pydantic** kullanılarak sıfırdan geliştirilmiş modern, hızlı ve ölçeklenebilir bir **Görev Yönetimi (Task Manager) RESTful API** uygulamasıdır. 
+Bu proje, FastAPI, SQLAlchemy ve Pydantic kullanılarak sıfırdan geliştirilmiş modern, hızlı ve ölçeklenebilir bir Görev Yönetimi RESTful API uygulamasıdır. 
 
 Modüler mimari prensiplerine uygun olarak tasarlanmış olup, tam kapsamlı CRUD (Create, Read, Update, Delete) operasyonlarını destekler.
 
----
-
 ## 🛠️ Kullanılan Teknolojiler ve Kütüphaneler
 
-* **Python 3.10+**
-* **FastAPI** (Yüksek performanslı, modern web framework'ü)
-* **SQLAlchemy** (Python ORM - Nesne İlişkisel Eşleme)
-* **Pydantic** (Veri doğrulama ve tip güvenliği)
-* **SQLite** (Hafif ve gömülü ilişkisel veritabanı)
-* **Uvicorn** (ASGI sunucusu)
+* Python 3.10+
+* FastAPI (Yüksek performanslı, modern web framework'ü)
+* SQLAlchemy (Python ORM - Nesne İlişkisel Eşleme)
+* Pydantic (Veri doğrulama ve tip güvenliği)
+* SQLite (Hafif ve gömülü ilişkisel veritabanı)
+* Uvicorn (ASGI sunucusu)
 
----
+## Proje Mimarisi
 
-## 📂 Proje Mimarisi
-
-Proje, sorumlulukların net bir şekilde ayrılması (Separation of Concerns) amacıyla modüler bir yapıda kurulmuştur:
+Proje, sorumlulukların net bir şekilde ayrılması amacıyla modüler bir yapıda kurulmuştur:
 
 ```text
 ├── .venv/                # Sanal ortam (Git takibinde değil)
