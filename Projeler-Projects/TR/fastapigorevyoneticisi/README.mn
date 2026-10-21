@@ -4,7 +4,7 @@ Bu proje, FastAPI, SQLAlchemy ve Pydantic kullanılarak sıfırdan geliştirilmi
 
 Modüler mimari prensiplerine uygun olarak tasarlanmış olup, tam kapsamlı CRUD (Create, Read, Update, Delete) operasyonlarını destekler.
 
-## 🛠️ Kullanılan Teknolojiler ve Kütüphaneler
+## Kullanılan Teknolojiler ve Kütüphaneler
 
 * Python 3.10+
 * FastAPI (Yüksek performanslı, modern web framework'ü)
