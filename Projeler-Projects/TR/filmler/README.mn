@@ -1,0 +1,15 @@
+# Film Kütüphanesi API (FastAPI & MySQL + JSON)
+
+Bu proje, modern Python backend geliştirme standartlarına uygun olarak geliştirilmiş, ilişkisel veritabanı mimarisi ile NoSQL esnekliğini (`JSON` sütunları) harmanlayan profesyonel bir RESTful API portfolyo çalışmasıdır.
+
+##  Kullanılan Teknolojiler
+* Python 3.x
+* FastAPI (Yüksek performanslı web framework'ü)
+* SQLAlchemy ORM (Veritabanı yönetim katmanı)
+* MySQL & PyMySQL (İlişkisel veritabanı ve sürücü)
+* Pydantic v2 (Veri doğrulama ve şemalar)
+
+##  Öne Çıkan Özellikler
+- Hibrit Veri Modeli: Temel alanlar (`isim`, `çıkış yılı`, `yapımcı`) geleneksel ilişkisel sütunlarda tutulurken, her filme özel değişebilen ek özellikler esnek `JSON` sütununda saklanır.
+- Dinamik JSON Filtreleme: MySQL JSON fonksiyonları kullanılarak, iç içe JSON verileri içinde anahtar-değer bazlı arama yapılabilir.
+- Tam CRUD Desteği: Filmleri listeleme, ekleme, güncelleme ve silme operasyonları.
