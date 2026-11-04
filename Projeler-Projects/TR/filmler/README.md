@@ -1,4 +1,4 @@
-# Filmler API.
+# Filmler API
 
 Kullanıcıların kendi film koleksiyonlarını yönetebileceği, JWT tabanlı kimlik doğrulama içeren bir FastAPI uygulaması.
 
