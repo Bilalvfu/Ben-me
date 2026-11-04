@@ -1,27 +1,30 @@
-# FastAPI Görev Yönetimi
+# Task Manager API with JWT Authentication
 
-Bu proje, FastAPI, SQLAlchemy ve Pydantic kullanılarak sıfırdan geliştirilmiş modern, hızlı ve ölçeklenebilir bir Görev Yönetimi RESTful API uygulamasıdır. 
+FastAPI kullanılarak geliştirilmiş, JWT tabanlı kimlik doğrulama içeren basit bir görev yönetim API'si.
 
-Modüler mimari prensiplerine uygun olarak tasarlanmış olup, tam kapsamlı CRUD (Create, Read, Update, Delete) operasyonlarını destekler.
+## Özellikler
 
-## Kullanılan Teknolojiler ve Kütüphaneler
+- Kullanıcı kaydı ve girişi (JWT)
+- Şifrelerin güvenli şekilde hash'lenmesi
+- Korumalı CRUD işlemleri (Task oluşturma, listeleme, güncelleme, silme)
+- Pydantic ile veri doğrulama
+- SQLite veritabanı
+- Temel unit testler
 
-* Python 3.10+
-* FastAPI (Yüksek performanslı, modern web framework'ü)
-* SQLAlchemy (Python ORM - Nesne İlişkisel Eşleme)
-* Pydantic (Veri doğrulama ve tip güvenliği)
-* SQLite (Hafif ve gömülü ilişkisel veritabanı)
-* Uvicorn (ASGI sunucusu)
+## Teknolojiler
 
-## Proje Mimarisi
+- **Backend:** FastAPI
+- **ORM:** SQLAlchemy
+- **Authentication:** JWT (python-jose)
+- **Password Hashing:** Passlib (pbkdf2_sha256)
+- **Veritabanı:** SQLite
+- **Test:** Pytest + TestClient
 
-Proje, sorumlulukların net bir şekilde ayrılması amacıyla modüler bir yapıda kurulmuştur:
-
-```text
-├── .venv/                # Sanal ortam (Git takibinde değil)
-├── database.py           # SQLite bağlantısı ve oturum yönetimi (SessionLocal)
-├── models.py             # SQLAlchemy veritabanı şeması (Task Tablosu)
-├── schemas.py            # Pydantic veri doğrulama ve model şemaları
-├── main.py               # FastAPI uygulaması ve CRUD endpoint'leri
-├── tasks.db              # SQLite veritabanı dosyası (Otomatik oluşur)
-└── README.md             # Proje dokümantasyonu
+- ## Proje Yapısı:
+- .
+├── main.py          # Ana uygulama ve endpoint'ler
+├── models.py        # SQLAlchemy modelleri
+├── schemas.py       # Pydantic şemaları
+├── database.py      # Veritabanı bağlantısı
+├── test_main.py     # Testler
+└── requirements.txt
