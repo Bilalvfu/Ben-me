@@ -21,7 +21,7 @@ FastAPI kullanılarak geliştirilmiş, JWT tabanlı kimlik doğrulama içeren ba
 - **Test:** Pytest + TestClient
 
 - ## Proje Yapısı:
-  
+
 ├── main.py          # Ana uygulama ve endpoint'ler
 ├── models.py        # SQLAlchemy modelleri
 ├── schemas.py       # Pydantic şemaları
