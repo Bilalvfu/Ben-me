@@ -1,5 +1,5 @@
 # Filmler API
-a
+
 Kullanıcıların kendi film koleksiyonlarını yönetebileceği, JWT tabanlı kimlik doğrulama içeren bir FastAPI uygulaması.
 
 Her kullanıcı sadece kendi eklediği filmleri görebilir, güncelleyebilir ve silebilir. Filmler tür (genre) ve izlenme durumuna (watched) göre filtrelenebilir.
