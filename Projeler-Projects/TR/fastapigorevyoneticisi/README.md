@@ -1,4 +1,4 @@
-# Task Manager API with JWT Authentication
+# Görev Yöneticisi API
 
 FastAPI kullanılarak geliştirilmiş, JWT tabanlı kimlik doğrulama içeren basit bir görev yönetim API'si.
 
