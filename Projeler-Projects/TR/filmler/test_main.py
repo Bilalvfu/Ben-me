@@ -8,7 +8,6 @@ import models
 from database import Base, get_db
 from main import app
 
-# Bellek içi test veritabanı (StaticPool ile güvenli bağlantı)
 SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
 
 engine = create_engine(
@@ -29,7 +28,6 @@ app.dependency_overrides[get_db] = override_get_db
 
 client = TestClient(app)
 
-# Her test öncesi tabloları sıfırdan kur, test bitince uçur
 @pytest.fixture(autouse=True)
 def setup_database():
     Base.metadata.create_all(bind=engine)
@@ -37,7 +35,6 @@ def setup_database():
     Base.metadata.drop_all(bind=engine)
 
 
-# --- Test Senaryoları ---
 
 def test_register_user():
     response = client.post(
@@ -50,13 +47,13 @@ def test_register_user():
     assert "id" in data
 
 def test_login_and_create_movie():
-    # 1. Kullanıcı kaydı
+    
     client.post(
         "/register",
         json={"username": "yonetmen", "password": "mypassword"}
     )
     
-    # 2. Giriş yap ve Token al
+    
     response = client.post(
         "/token",
         data={"username": "yonetmen", "password": "mypassword"}
@@ -65,7 +62,7 @@ def test_login_and_create_movie():
     token_data = response.json()
     token = token_data["access_token"]
     
-    # 3. Token ile Film Ekle
+    
     headers = {"Authorization": f"Bearer {token}"}
     movie_response = client.post(
         "/movies/",
@@ -85,16 +82,16 @@ def test_login_and_create_movie():
     assert movie_data["watched"] is True
 
 def test_filter_movies():
-    # Kullanıcı oluştur ve giriş yap
+    
     client.post("/register", json={"username": "filmest", "password": "password123"})
     token = client.post("/token", data={"username": "filmest", "password": "password123"}).json()["access_token"]
     headers = {"Authorization": f"Bearer {token}"}
     
-    # İki farklı türde film ekle
+    
     client.post("/movies/", json={"title": "Matrix", "director": "Wachowski", "release_year": 1999, "genre": "Sci-Fi"}, headers=headers)
     client.post("/movies/", json={"title": "The Godfather", "director": "Coppola", "release_year": 1972, "genre": "Crime"}, headers=headers)
     
-    # Sadece Sci-Fi filmlerini filtrele
+    
     response = client.get("/movies/?genre=Sci-Fi", headers=headers)
     assert response.status_code == 200
     movies = response.json()
