@@ -9,7 +9,6 @@ class User(Base):
     username = Column(String, unique=True, index=True)
     hashed_password = Column(String)
 
-    # Kullanıcının filmleri ile ilişki
     movies = relationship("Movie", back_populates="owner")
 
 class Movie(Base):
