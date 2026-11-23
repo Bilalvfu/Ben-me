@@ -1,4 +1,4 @@
-# Films API
+# Filmler API
 
 Kullanıcıların kendi film koleksiyonlarını yönetebildiği, FastAPI ve SQLite tabanlı REST API. Kimlik doğrulama JWT Bearer token ile yapılır; her kullanıcı yalnızca kendi filmlerine erişebilir.
 
