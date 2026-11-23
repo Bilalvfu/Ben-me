@@ -83,4 +83,3 @@ Testler bellek içi SQLite veritabanı kullanır.
 ```
 
 `main.py` içindeki JWT `SECRET_KEY` geliştirme amaçlı sabit bir değerdir. Gerçek dağıtımda gizli anahtarı ortam değişkeninden okuyacak şekilde yapılandırın.
-.
