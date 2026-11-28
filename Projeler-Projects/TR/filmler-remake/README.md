@@ -1,4 +1,4 @@
-# Filmler API
+# Filmler API Remake
 
 Film ve yönetmen kayıtlarını yönetmek için FastAPI, SQLAlchemy ve PostgreSQL ile geliştirilmiş bir REST API.
 
